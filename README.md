@@ -47,7 +47,7 @@ It creates the following structure:
 ```
 ./ntrprtr-fsf-config
 ├───ext
-│       ext-file-descriptor-table.json
+│       ext-group-descriptor-table.json
 │       ext-inode.json
 │       ext-super-block.json
 │       
