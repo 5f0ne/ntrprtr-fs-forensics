@@ -1,0 +1,188 @@
+{
+    "name": "FAT Directory Entry Examiner",
+    "description": "Examines directory entries in FAT file systems",
+    "ntrprtr": [
+        {
+            "name": "objName_1",
+            "description": "First Letter of Object Name & Allocation State",
+            "start": 0,
+            "end": 0,
+            "action": [
+                {
+                    "type": "equals",
+                    "endianess": "big",
+                    "noMatch": "",
+                    "cmp": [
+                        {
+                            "value": "E5",
+                            "description": "File deleted!"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "objName2_11",
+            "description": "Letters 2 - 11 of Object Name",
+            "start": 1,
+            "end": 10,
+            "action": [
+                {
+                    "type": "ascii",
+                    "nonAsciiPlaceholder": "."
+                }
+            ]
+        },
+        {
+            "name": "objAttr",
+            "description": "Object Attributes",
+            "start": 11,
+            "end": 11,
+            "action": [
+                {
+                    "type": "bitequals",
+                    "endianess": "big",
+                    "cmp": [
+                        {
+                            "value": "00000001",
+                            "description": "Read Only Access"
+                        },
+                        {
+                            "value": "00000010",
+                            "description": "Hidden"
+                        },
+                        {
+                            "value": "00000100",
+                            "description": "Windows System File"
+                        },
+                        {
+                            "value": "00001000",
+                            "description": "FAT Volume Label"
+                        },
+                        {
+                            "value": "00001111",
+                            "description": "Long Filename"
+                        },
+                        {
+                            "value": "00010001",
+                            "description": "Directory"
+                        },
+                        {
+                            "value": "00100000",
+                            "description": "Object is Part of Archive"
+                        }
+                    ],
+                    "noMatch": "No attributes matched!"
+                }
+            ]
+        },
+        {
+            "name": "reserved",
+            "description": "Reserved",
+            "start": 12,
+            "end": 12
+        },
+        {
+            "name": "objectCreationHunSec",
+            "description": "Time of Object Creation in Hundredths of Seconds",
+            "start": 13,
+            "end": 13
+        },
+        {
+            "name": "objectCreationHourMinSec",
+            "description": "Time of Object Creation in Hours, Minutes and Seconds",
+            "start": 14,
+            "end": 15,
+            "action": [
+                {
+                    "type": "dostime",
+                    "endianess": "little"
+                }
+            ]
+        },
+        {
+            "name": "objectCreationDate",
+            "description": "Date of Object Creation",
+            "start": 16,
+            "end": 17,
+            "action": [
+                {
+                    "type": "dosdate",
+                    "endianess": "little"
+                }
+            ]
+        },
+        {
+            "name": "lastAccessDate",
+            "description": "Date of Last Object Access",
+            "start": 18,
+            "end": 19,
+            "action": [
+                {
+                    "type": "dosdate",
+                    "endianess": "little"
+                }
+            ]
+        },
+        {
+            "name": "addrFirstDataUnitMSB",
+            "description": "Addr of first Data Unit (2 MSB)",
+            "start": 20,
+            "end": 21,
+            "action": [
+                {
+                    "type": "decimal",
+                    "endianess": "little"
+                }
+            ]
+        },
+        {
+            "name": "lastWriteAccessTime",
+            "description": "Time of Last Object Write Access in Hours, Minutes and Seconds",
+            "start": 22,
+            "end": 23,
+            "action": [
+                {
+                    "type": "dostime",
+                    "endianess": "little"
+                }
+            ]
+        },
+        {
+            "name": "lastWriteAccessDate",
+            "description": "Date of Last Object Write Access",
+            "start": 24,
+            "end": 25,
+            "action": [
+                {
+                    "type": "dosdate",
+                    "endianess": "little"
+                }
+            ]
+        },
+        {
+            "name": "addrFirstDataUnitLSB",
+            "description": "Addr of first Data Unit (2 LSB)",
+            "start": 26,
+            "end": 27,
+            "action": [
+                {
+                    "type": "decimal",
+                    "endianess": "little"
+                }
+            ]
+        },
+        {
+            "name": "objSize",
+            "description": "Size of Object in Bytes",
+            "start": 28,
+            "end": 31,
+            "action": [
+                {
+                    "type": "decimal",
+                    "endianess": "little"
+                }
+            ]
+        }
+    ]
+}

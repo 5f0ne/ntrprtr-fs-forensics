@@ -1,0 +1,162 @@
+{
+    "name": "FAT32 Volume Boot Record Examiner",
+    "description": "Examines FAT32-specific part of FAT volume boot record",
+    "ntrprtr": [
+        {
+            "name": "sizeOfFatStructureInLS",
+            "description": "Size of FAT strucuture in LS",
+            "start": 36,
+            "end": 39,
+            "action": [
+                {
+                    "type": "decimal",
+                    "endianess": "little"
+                }
+            ]
+        },
+        {
+            "name": "activeFatIndicator",
+            "description": "Indicates which FAT structure is active",
+            "start": 40,
+            "end": 41
+        },
+        {
+            "name": "fsVersionNumber",
+            "description": "File System Version Number",
+            "start": 42,
+            "end": 43
+        },
+        {
+            "name": "dataUnitOfRootDir",
+            "description": "Root Dir Data Unit",
+            "start": 44,
+            "end": 47
+        },
+        {
+            "name": "fsInfoLS",
+            "description": "Logical Sector of FSInfo structure",
+            "start": 48,
+            "end": 49,
+            "action": [
+                {
+                    "type": "decimal",
+                    "endianess": "little"
+                }
+            ]
+        },
+        {
+            "name": "bootSectorCopyLS",
+            "description": "Logical Sector of Boot Sector Copy",
+            "start": 50,
+            "end": 51,
+            "action": [
+                {
+                    "type": "decimal",
+                    "endianess": "little"
+                }
+            ]
+        },
+        {
+            "name": "reserved",
+            "description": "Reserved",
+            "start": 52,
+            "end": 63
+        },
+        {
+            "name": "driveNumber",
+            "description": "INT 0x13 Drive Number",
+            "start": 64,
+            "end": 64,
+            "action": [
+                {
+                    "type": "equals",
+                    "endianess": "big",
+                    "cmp": [
+                        {
+                            "value": "00",
+                            "description": "Floppy Disk"
+                        },
+                        {
+                            "value": "80",
+                            "description": "Hard Disk"
+                        }
+                    ],
+                    "noMatch": "No match found!"
+                }
+            ]
+        },
+        {
+            "name": "notUsed1",
+            "description": "Not Used",
+            "start": 65,
+            "end": 65
+        },
+        {
+            "name": "extendedBootSignature",
+            "description": "Extended Boot Signature",
+            "start": 66,
+            "end": 66,
+            "action": [
+                {
+                    "type": "equals",
+                    "endianess": "big",
+                    "cmp": [
+                        {
+                            "value": "29",
+                            "description": "Drive Serial Number, Drive Descriptor and \n    FAT Type are available"
+                        }
+                    ],
+                    "noMatch": "No additional fields"
+                }
+            ]
+        },
+        {
+            "name": "driveSerialNumber",
+            "description": "Drive Serial Number",
+            "start": 67,
+            "end": 70
+        },
+        {
+            "name": "driveLabel",
+            "description": "Drive Label",
+            "start": 71,
+            "end": 81,
+            "action": [
+                {
+                    "type": "ascii",
+                    "nonAsciiPlaceholder": "."
+                }
+            ]
+        },
+        {
+            "name": "fatType",
+            "description": "FAT Type",
+            "start": 82,
+            "end": 89,
+            "action": [
+                {
+                    "type": "ascii",
+                    "nonAsciiPlaceholder": "."
+                }
+            ]
+        },
+        {
+            "name": "notUsed2",
+            "description": "Not Used",
+            "start": 90,
+            "end": 509,
+            "action": [
+                {
+                    "type": "hexdump",
+                    "nonAsciiPlaceholder": "."
+                }
+            ]
+        },
+        {
+            "name": "signature",
+            "description": "Signature",
+            "start": 510,
+            "end": 511
+        }
+    ]
+}

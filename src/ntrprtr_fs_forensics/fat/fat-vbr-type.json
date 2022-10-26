@@ -1,0 +1,30 @@
+{
+    "name": "FAT Type Distinguisher",
+    "description": "Distingusihes beteen the different FAT types",
+    "ntrprtr": [
+        {
+            "name": "fat1216Type",
+            "description": "FAT12/16 Type Value in FAT VBR",
+            "start": 54,
+            "end": 61,
+            "action": [
+                {
+                    "type": "ascii",
+                    "nonAsciiPlaceholder": "."
+                }
+            ]
+        },
+        {
+            "name": "fat32Type",
+            "description": "FAT32 Type Value in FAT VBR",
+            "start": 82,
+            "end": 89,
+            "action": [
+                {
+                    "type": "ascii",
+                    "nonAsciiPlaceholder": "."
+                }
+            ]
+        }
+    ]
+}

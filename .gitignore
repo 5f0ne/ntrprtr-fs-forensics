@@ -1,0 +1,8 @@
+env/
+dist/
+data/
+build/
+*-setup-*
+**/__pycache__
+**/*.egg-info/
+ntrprtr-fsf-config
