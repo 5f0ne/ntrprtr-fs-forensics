@@ -30,7 +30,13 @@
             "name": "dataUnitOfRootDir",
             "description": "Root Dir Data Unit",
             "start": 44,
-            "end": 47
+            "end": 47,
+            "action": [
+                {
+                    "type": "decimal",
+                    "endianess": "little"
+                }
+            ]
         },
         {
             "name": "fsInfoLS",
@@ -103,7 +109,7 @@
                     "cmp": [
                         {
                             "value": "29",
-                            "description": "Drive Serial Number, Drive Descriptor and \n    FAT Type are available"
+                            "description": "Drive Serial Number, Drive Descriptor and \n            FAT Type are available"
                         }
                     ],
                     "noMatch": "No additional fields"
@@ -154,9 +160,22 @@
         },
         {
             "name": "signature",
-            "description": "Signature",
+            "description": "Signature 55 AA",
             "start": 510,
-            "end": 511
+            "end": 511,
+            "action": [
+                {
+                    "type": "equals",
+                    "endianess": "big",
+                    "noMatch": "Signature invalid!",
+                    "cmp": [
+                        {
+                            "value": "55AA",
+                            "description": "Signature valid!"
+                        }
+                    ]
+                }
+            ]
         }
     ]
 }

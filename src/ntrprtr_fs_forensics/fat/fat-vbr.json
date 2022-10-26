@@ -4,13 +4,13 @@
     "ntrprtr": [
         {
             "name": "bootCodeJmpInst",
-            "description": "Boot Code JMP Instruction (0x0000 - 0x0002 | 3 Bytes)",
+            "description": "Boot Code JMP Instruction",
             "start": 0,
             "end": 2
         },
         {
             "name": "fsOemName",
-            "description": "File System OEM Name (0x0003 - 0x000A | 8 Bytes)",
+            "description": "File System OEM Name",
             "start": 3,
             "end": 10,
             "action": [
@@ -22,7 +22,7 @@
         },
         {
             "name": "sectorSize",
-            "description": "Logical Sector Size (0x000B - 0x000C | 2 Bytes)",
+            "description": "Logical Sector Size",
             "start": 11,
             "end": 12,
             "action": [
@@ -34,7 +34,7 @@
         },
         {
             "name": "sectorsPerDataUnit",
-            "description": "Logical Sectors per Data Unit (0x000D - 0x000D | 1 Byte)",
+            "description": "Logical Sectors per Data Unit",
             "start": 13,
             "end": 13,
             "action": [
@@ -46,7 +46,7 @@
         },
         {
             "name": "sectorsPerReserved",
-            "description": "Logical Sectors within Reserved Area (0x000E - 0x000F | 2 Bytes)",
+            "description": "Logical Sectors within Reserved Area",
             "start": 14,
             "end": 15,
             "action": [
@@ -58,7 +58,7 @@
         },
         {
             "name": "noOfFATs",
-            "description": "File Allocation Tables in File System (0x0010 - 0x0010 | 1 Byte)",
+            "description": "File Allocation Tables in File System",
             "start": 16,
             "end": 16,
             "action": [
@@ -70,7 +70,7 @@
         },
         {
             "name": "maxFilesInRootDir",
-            "description": "Max. No. of Files in Root Directory (0x0011 - 0x0012 | 2 Bytes)",
+            "description": "Max. No. of Files in Root Directory",
             "start": 17,
             "end": 18,
             "action": [
@@ -82,7 +82,7 @@
         },
         {
             "name": "noOfSectorsInFS",
-            "description": "No. of Logical Sectors in File System (2 Bytes) (0x0013 - 0x0014 | 2 Bytes)",
+            "description": "No. of Logical Sectors in File System (2 Bytes)",
             "start": 19,
             "end": 20,
             "action": [
@@ -94,7 +94,7 @@
         },
         {
             "name": "storageMediaType",
-            "description": "Disk Type (2 Bytes) (0x0015 - 0x0015 | 1 Byte)",
+            "description": "Disk Type",
             "start": 21,
             "end": 21,
             "action": [
@@ -117,7 +117,7 @@
         },
         {
             "name": "noOfSectorsInFATs",
-            "description": "No. of Logical Sectors per File Allocation Table (0x0016 - 0x0017 | 2 Bytes)",
+            "description": "No. of Logical Sectors per File Allocation Table",
             "start": 22,
             "end": 23,
             "action": [
@@ -129,7 +129,7 @@
         },
         {
             "name": "noOfSectorsPerTrack",
-            "description": "No. of Logical Sectors per Track (0x0018 - 0x0019 | 2 Bytes)",
+            "description": "No. of Logical Sectors per Track",
             "start": 24,
             "end": 25,
             "action": [
@@ -141,7 +141,7 @@
         },
         {
             "name": "noOfHeads",
-            "description": "No. of Heads (0x001A - 0x001B | 2 Bytes)",
+            "description": "No. of Heads",
             "start": 26,
             "end": 27,
             "action": [
@@ -153,7 +153,7 @@
         },
         {
             "name": "noOfHiddenLS",
-            "description": "No. of Hidden Logical Sectors before Start of Partition (0x001C - 0x001F | 4 Bytes)",
+            "description": "No. of Hidden Logical Sectors before Start of Partition",
             "start": 28,
             "end": 31,
             "action": [
@@ -165,7 +165,7 @@
         },
         {
             "name": "noOfSectorsInFS_long",
-            "description": " No. of Logical Sectors in File System (4 Bytes) (0x0020 - 0x0023 | 4 Bytes)",
+            "description": " No. of Logical Sectors in File System (4 Bytes)",
             "start": 32,
             "end": 35,
             "action": [

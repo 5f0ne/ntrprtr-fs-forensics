@@ -1,6 +1,6 @@
 {
     "name": "FAT Type Distinguisher",
-    "description": "Distingusihes beteen the different FAT types",
+    "description": "Distinguishes between different FAT types",
     "ntrprtr": [
         {
             "name": "fat1216Type",

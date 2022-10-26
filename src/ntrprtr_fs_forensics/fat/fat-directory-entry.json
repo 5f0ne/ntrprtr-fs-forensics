@@ -4,18 +4,26 @@
     "ntrprtr": [
         {
             "name": "objName_1",
-            "description": "First Letter of Object Name & Allocation State",
+            "description": "First Letter of Object Name and Allocation State",
             "start": 0,
             "end": 0,
             "action": [
                 {
+                    "type": "ascii",
+                    "nonAsciiPlaceholder": "."
+                },
+                {
                     "type": "equals",
                     "endianess": "big",
-                    "noMatch": "",
+                    "noMatch": "Allocated",
                     "cmp": [
                         {
                             "value": "E5",
-                            "description": "File deleted!"
+                            "description": "Not allocated!"
+                        },
+                        {
+                            "value": "00",
+                            "description": "Not allocated!"
                         }
                     ]
                 }
@@ -39,6 +47,10 @@
             "start": 11,
             "end": 11,
             "action": [
+                {
+                    "type": "binary",
+                    "endianess": "big"
+                },
                 {
                     "type": "bitequals",
                     "endianess": "big",
@@ -72,7 +84,7 @@
                             "description": "Object is Part of Archive"
                         }
                     ],
-                    "noMatch": "No attributes matched!"
+                    "noMatch": "No attributes found!"
                 }
             ]
         },
@@ -86,7 +98,13 @@
             "name": "objectCreationHunSec",
             "description": "Time of Object Creation in Hundredths of Seconds",
             "start": 13,
-            "end": 13
+            "end": 13,
+            "action": [
+                {
+                    "type": "decimal",
+                    "endianess": "little"
+                }
+            ]
         },
         {
             "name": "objectCreationHourMinSec",

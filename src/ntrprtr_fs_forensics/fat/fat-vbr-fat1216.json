@@ -4,7 +4,7 @@
     "ntrprtr": [
         {
             "name": "driveNumber",
-            "description": "INT 0x13 Drive Number (0x0024 - 0x0024 | 1 Byte)",
+            "description": "INT 0x13 Drive Number",
             "start": 36,
             "end": 36,
             "action": [
@@ -26,13 +26,13 @@
         },
         {
             "name": "reserved",
-            "description": "Reserved (0x0025 - 0x0025 | 1 Byte)",
+            "description": "Reserved",
             "start": 37,
             "end": 37
         },
         {
             "name": "extendedBootSignature",
-            "description": "Extended Boot Signature (0x0026 - 0x0026 | 1 Bytes)",
+            "description": "Extended Boot Signature",
             "start": 38,
             "end": 38,
             "action": [
@@ -50,13 +50,13 @@
         },
         {
             "name": "driveSerialNumber",
-            "description": "Drive Serial Number (0x0027 - 0x002A | 4 Bytes)",
+            "description": "Drive Serial Number",
             "start": 39,
             "end": 42
         },
         {
             "name": "driveLabel",
-            "description": "Drive Label (0x002B - 0x0035 | 11 Bytes)",
+            "description": "Drive Label",
             "start": 43,
             "end": 53,
             "action": [
@@ -68,7 +68,7 @@
         },
         {
             "name": "fatType",
-            "description": "FAT Type (0x0036 - 0x003D | 8 Bytes)",
+            "description": "FAT Type",
             "start": 54,
             "end": 61,
             "action": [
@@ -80,7 +80,7 @@
         },
         {
             "name": "notUsed",
-            "description": "Not Used (0x003E - 0x01FD | 448 Byte)",
+            "description": "Not Used",
             "start": 62,
             "end": 509,
             "action": [
@@ -92,9 +92,22 @@
         },
         {
             "name": "signature",
-            "description": "Signature (0x01FE - 0x01FF | 2 Byte)",
+            "description": "Signature - 55 AA",
             "start": 510,
-            "end": 511
+            "end": 511,
+            "action": [
+                {
+                    "type": "equals",
+                    "endianess": "big",
+                    "noMatch": "Signature invalid!",
+                    "cmp": [
+                        {
+                            "value": "55AA",
+                            "description": "Signature valid!"
+                        }
+                    ]
+                }
+            ]
         }
     ]
 }

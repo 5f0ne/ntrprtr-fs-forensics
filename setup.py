@@ -24,7 +24,7 @@ setup(
         "ntrprtr_fs_forensics.fat": ["fat-vbr.json", "fat-vbr-fat1216.json", "fat-vbr-fat32.json",
                                       "fat-vbr-type.json", "fat-fs-info.json",
                                       "fat-directory-entry.json", "fat-long-filename.json"],
-        "ntrprtr_fs_forensics.ext": ["ext-file-descriptor-table.json", "ext-inode.json",
+        "ntrprtr_fs_forensics.ext": ["ext-group-descriptor-table.json", "ext-inode.json",
                                      "ext-super-block.json"],
         "ntrprtr_fs_forensics.ntfs": [],
     },

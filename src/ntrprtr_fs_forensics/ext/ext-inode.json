@@ -35,31 +35,83 @@
         },
         {
             "name": "accessTime",
-            "description": "Access Time (atime)",
+            "description": "Access Time (atime: Last access (read))",
             "start": 8,
             "end": 11,
-            "action": []
+            "action": [
+                {
+                    "type": "endianess",
+                    "endianess": "little"
+                },
+                {
+                    "type": "decimal",
+                    "endianess": "little"
+                },
+                {
+                    "type": "unixtime",
+                    "endianess": "little"
+                }
+            ]
         },
         {
             "name": "changeTime",
-            "description": "Change Time (ctime, last inode modification)",
+            "description": "Change Time (ctime: last inode modification)",
             "start": 12,
             "end": 15,
-            "action": []
+            "action": [
+                {
+                    "type": "endianess",
+                    "endianess": "little"
+                },
+                {
+                    "type": "decimal",
+                    "endianess": "little"
+                },
+                {
+                    "type": "unixtime",
+                    "endianess": "little"
+                }
+            ]
         },
         {
             "name": "modificationTime",
-            "description": "Modification Time (mtime: Letzte Änderung am Dateiinhalt)",
+            "description": "Modification Time (mtime: last file content modification)",
             "start": 16,
             "end": 19,
-            "action": []
+            "action": [
+                {
+                    "type": "endianess",
+                    "endianess": "little"
+                },
+                {
+                    "type": "decimal",
+                    "endianess": "little"
+                },
+                {
+                    "type": "unixtime",
+                    "endianess": "little"
+                }
+            ]
         },
         {
             "name": "deletionTime",
             "description": "Deletion Time",
             "start": 20,
             "end": 23,
-            "action": []
+            "action": [
+                {
+                    "type": "endianess",
+                    "endianess": "little"
+                },
+                {
+                    "type": "decimal",
+                    "endianess": "little"
+                },
+                {
+                    "type": "unixtime",
+                    "endianess": "little"
+                }
+            ]
         },
         {
             "name": "lower16BitGroupID",
@@ -73,17 +125,24 @@
             "description": "Link Count",
             "start": 26,
             "end": 27,
-            "action": []
+            "action": [
+                {
+                    "type": "decimal",
+                    "endianess": "little"
+                }
+            ]
         },
         {
             "name": "noOfSectors",
             "description": "No. of Sectors",
             "start": 28,
             "end": 31,
-            "action": {
-                "type": "decimal",
-                "endianess": "little"
-            }
+            "action": [
+                {
+                    "type": "decimal",
+                    "endianess": "little"
+                }
+            ]
         },
         {
             "name": "flags",
@@ -104,7 +163,12 @@
             "description": "12 direct Data Block Pointer",
             "start": 40,
             "end": 87,
-            "action": []
+            "action": [
+                {
+                    "type": "hexdump",
+                    "nonAsciiPlaceholder": "."
+                }
+            ]
         },
         {
             "name": "simpleIndirectDataBlockPointer",
@@ -167,7 +231,12 @@
             "description": "Fragment Size",
             "start": 117,
             "end": 117,
-            "action": []
+            "action": [
+                {
+                    "type": "decimal",
+                    "endianess": "little"
+                }
+            ]
         },
         {
             "name": "notUsed2",
@@ -192,7 +261,7 @@
         },
         {
             "name": "notUsed3",
-            "description": "desc",
+            "description": "Not used",
             "start": 124,
             "end": 127
         }

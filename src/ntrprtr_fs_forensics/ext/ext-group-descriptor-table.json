@@ -1,6 +1,6 @@
 {
-    "name": "ext File Descriptor Table Examiner",
-    "description": "Examines File Descriptor Tables in ext file systems",
+    "name": "ext Group Descriptor Table Examiner",
+    "description": "Examines Group Descriptor Tables in ext file systems",
     "ntrprtr": [
         {
             "name": "blockBitmap",
@@ -81,7 +81,8 @@
             "end": 31,
             "action": [
                 {
-                    "type": "hexdump"
+                    "type": "hexdump",
+                    "nonAsciiPlaceholder": "."
                 }
             ]
         }
