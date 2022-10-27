@@ -47,10 +47,11 @@ It creates the following structure:
 ```
 ./ntrprtr-fsf-config
 ├───ext
+│       ext-file-descriptor-table.json
 │       ext-group-descriptor-table.json
 │       ext-inode.json
 │       ext-super-block.json
-│       
+│
 ├───fat
 │       fat-directory-entry.json
 │       fat-fs-info.json
@@ -61,15 +62,18 @@ It creates the following structure:
 │       fat-vbr.json
 │
 └───ntfs
+        ntfs-attribute-header-general.json
+        ntfs-attribute-header-non-resident.json
+        ntfs-attribute-header-resident.json
+        ntfs-attribute-standard-information.json
+        ntfs-mft-header.json
+        ntfs-vbr.json
 ```
 
 Now just use the config as input for `ntrprtr`:
 ```bash
 python -m ntrprtr -m interpret -p dir-entry.bin -c ./ntrprtr-fsf-config/fat/fat-directory-entry.json -r result.txt
 ```
-
-
-
 
 # License
 
