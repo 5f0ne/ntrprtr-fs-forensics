@@ -1,0 +1,270 @@
+{
+    "name": "NTFS Volume Boot Record Examiner",
+    "description": "Examines the NTFS volume boot record",
+    "ntrprtr": [
+        {
+            "name": "bootCodeJmpInst",
+            "description": "Boot Code JMP Instruction",
+            "start": 0,
+            "end": 2
+        },
+        {
+            "name": "fsOemName",
+            "description": "File System OEM Name",
+            "start": 3,
+            "end": 10,
+            "action": [
+                {
+                    "type": "ascii",
+                    "nonAsciiPlaceholder": "."
+                }
+            ]
+        },
+        {
+            "name": "sectorSize",
+            "description": "Logical Sector Size",
+            "start": 11,
+            "end": 12,
+            "action": [
+                {
+                    "type": "endianess",
+                    "endianess": "little"
+                },
+                {
+                    "type": "decimal",
+                    "endianess": "little"
+                }
+            ]
+        },
+        {
+            "name": "sectorsPerDataUnit",
+            "description": "Logical Sectors per Data Unit",
+            "start": 13,
+            "end": 13,
+            "action": [
+                {
+                    "type": "endianess",
+                    "endianess": "little"
+                },
+                {
+                    "type": "decimal",
+                    "endianess": "little"
+                }
+            ]
+        },
+        {
+            "name": "reserved",
+            "description": "Reserved",
+            "start": 14,
+            "end": 20,
+            "action": [
+                {
+                    "type": "equals",
+                    "endianess": "big",
+                    "cmp": [
+                        {
+                            "value": "00000000000000",
+                            "description": "Volume is mountable!"
+                        }
+                    ],
+                    "noMatch": "Volume is not mountable!"
+                }
+            ]
+        },
+        {
+            "name": "volumneDescription",
+            "description": "Volume Description (Not used anymore)",
+            "start": 21,
+            "end": 21
+        },
+        {
+            "name": "reserved",
+            "description": "Reserved",
+            "start": 22,
+            "end": 23,
+            "action": [
+                {
+                    "type": "equals",
+                    "endianess": "big",
+                    "cmp": [
+                        {
+                            "value": "0000",
+                            "description": "Volume is mountable!"
+                        }
+                    ],
+                    "noMatch": "Volume is not mountable!"
+                }
+            ]
+        },
+        {
+            "name": "notUsed1",
+            "description": "Not used",
+            "start": 24,
+            "end": 31
+        },
+        {
+            "name": "reserved",
+            "description": "Reserved",
+            "start": 32,
+            "end": 35,
+            "action": [
+                {
+                    "type": "equals",
+                    "endianess": "big",
+                    "cmp": [
+                        {
+                            "value": "00000000",
+                            "description": "Volume is mountable!"
+                        }
+                    ],
+                    "noMatch": "Volume is not mountable!"
+                }
+            ]
+        },
+        {
+            "name": "notUsed2",
+            "description": "Not used",
+            "start": 36,
+            "end": 39
+        },
+        {
+            "name": "totalNumberOfSectors",
+            "description": "Total Number of Sectors per Volume",
+            "start": 40,
+            "end": 47,
+            "action": [
+                {
+                    "type": "endianess",
+                    "endianess": "little"
+                },
+                {
+                    "type": "decimal",
+                    "endianess": "little"
+                }
+            ]
+        },
+        {
+            "name": "numberOfMFT",
+            "description": "Data Unit Number of $MFT",
+            "start": 48,
+              "end": 55,
+            "action": [
+                {
+                    "type": "endianess",
+                    "endianess": "little"
+                },
+                {
+                    "type": "decimal",
+                    "endianess": "little"
+                }
+            ]
+        },
+        {
+            "name": "numberOfMFTMirr",
+            "description": "Data Unit Number of $MFTMirr",
+            "start": 56,
+              "end": 63,
+            "action": [
+                {
+                    "type": "endianess",
+                    "endianess": "little"
+                },
+                {
+                    "type": "decimal",
+                    "endianess": "little"
+                }
+            ]
+        },
+        {
+            "name": "clusterPerMftEntry",
+            "description": "Cluster (or Byte) per MFT-Entry",
+            "start": 64,
+              "end": 64,
+            "action": [
+                {
+                    "type": "decimal",
+                    "endianess": "little"
+                }
+            ]
+        },
+        {
+            "name": "notUsed3",
+            "description": "Not used",
+            "start": 65,
+            "end": 67
+        },
+        {
+            "name": "clusterPerIndexBuffer",
+            "description": "Cluster (or Byte) per Index Buffer",
+            "start": 68,
+              "end": 68,
+            "action": [
+                {
+                    "type": "decimal",
+                    "endianess": "little"
+                }
+            ]
+        },
+        {
+            "name": "notUsed4",
+            "description": "Not used",
+            "start": 69,
+            "end": 71
+        },
+        {
+            "name": "volumeSerialNumber",
+            "description": "Volume Serial Number",
+            "start": 72,
+            "end": 79
+        },
+        {
+            "name": "notUsed5",
+            "description": "Not used",
+            "start": 80,
+            "end": 83
+        },
+        {
+            "name": "bootstrapCode",
+            "description": "Bootstrap Code",
+            "start": 84,
+              "end": 386,
+            "action": [
+                {
+                    "type": "hexdump",
+                    "nonAsciiPlaceholder": "."
+                }
+            ]
+        },
+        {
+            "name": "chars",
+            "description": "Character Sequence",
+            "start": 387,
+              "end": 509,
+            "action": [
+                {
+                    "type": "hexdump",
+                    "nonAsciiPlaceholder": "."
+                }
+            ]
+        },
+        {
+            "name": "signature",
+            "description": "Signature - 55 AA",
+            "start": 510,
+            "end": 511,
+            "action": [
+                {
+                    "type": "equals",
+                    "endianess": "big",
+                    "noMatch": "Signature invalid!",
+                    "cmp": [
+                        {
+                            "value": "55AA",
+                            "description": "Signature valid!"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

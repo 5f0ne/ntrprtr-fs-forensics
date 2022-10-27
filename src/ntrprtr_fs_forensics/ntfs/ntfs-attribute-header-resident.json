@@ -1,0 +1,45 @@
+{
+    "name": "NTFS MFT Resident Attribute Header Examiner",
+    "description": "Examines NTFS MFT Resident Attribute Headers",
+    "ntrprtr": [
+        {
+            "name": "contentLength",
+            "description": "Content Length",
+            "start": 16,
+            "end": 19,
+            "action": [
+                {
+                    "type": "endianess",
+                    "endianess": "little"
+                },
+                {
+                    "type": "decimal",
+                    "endianess": "little"
+                }
+            ]
+        },
+        {
+            "name": "contentOffset",
+            "description": "Content Offset",
+            "start": 20,
+            "end": 21,
+            "action": [
+                {
+                    "type": "endianess",
+                    "endianess": "little"
+                },
+                {
+                    "type": "decimal",
+                    "endianess": "little"
+                }
+            ]
+        },
+        {
+            "name": "notUsed1",
+            "description": "Not used",
+            "start": 22,
+            "end": 23,
+            "action": []
+        }
+    ]
+}

@@ -1,0 +1,123 @@
+{
+    "name": "NTFS MFT Non Resident Attribute Header Examiner",
+    "description": "Examines NTFS MFT Non Resident Attribute Header",
+    "ntrprtr": [
+        {
+            "name": "startVirtClusterNr",
+            "description": "Start of Virtual Cluster Number",
+            "start": 16,
+            "end": 23,
+            "action": [
+                {
+                    "type": "endianess",
+                    "endianess": "little"
+                },
+                {
+                    "type": "decimal",
+                    "endianess": "little"
+                }
+            ]
+        },
+        {
+            "name": "endVirtClusterNr",
+            "description": "End of Virtual Cluster Number",
+            "start": 24,
+            "end": 31,
+            "action": [
+                {
+                    "type": "endianess",
+                    "endianess": "little"
+                },
+                {
+                    "type": "decimal",
+                    "endianess": "little"
+                }
+            ]
+        },
+        {
+            "name": "runlistOffset",
+            "description": "Runlist Offset",
+            "start": 32,
+            "end": 33,
+            "action": [
+                {
+                    "type": "endianess",
+                    "endianess": "little"
+                },
+                {
+                    "type": "decimal",
+                    "endianess": "little"
+                }
+            ]
+        },
+        {
+            "name": "compressedUnitSize",
+            "description": "Compressed Unit Size",
+            "start": 34,
+            "end": 35,
+            "action": []
+        },
+        {
+            "name": "notUsed1",
+            "description": "Not used",
+            "start": 36,
+            "end": 39,
+            "action": []
+        },
+        {
+            "name": "sizeOfAttrContent",
+            "description": "Size of Attribute Content",
+            "start": 40,
+            "end": 47,
+            "action": [
+                {
+                    "type": "endianess",
+                    "endianess": "little"
+                },
+                {
+                    "type": "decimal",
+                    "endianess": "little"
+                }
+            ]
+        },
+        {
+            "name": "sizeOfAttrContentVol",
+            "description": "Size of Attribute Content on Volume",
+            "start": 48,
+            "end": 55,
+            "action": [
+                {
+                    "type": "endianess",
+                    "endianess": "little"
+                },
+                {
+                    "type": "decimal",
+                    "endianess": "little"
+                }
+            ]
+        },
+        {
+            "name": "initSizeOfAttrContent",
+            "description": "Initialised Size of Attribute Content",
+            "start": 56,
+            "end": 63,
+            "action": [
+                {
+                    "type": "endianess",
+                    "endianess": "little"
+                },
+                {
+                    "type": "decimal",
+                    "endianess": "little"
+                }
+            ]
+        },
+        {
+            "name": "dataRunlist",
+            "description": "Data Runlist",
+            "start": 64,
+            "end": 79,
+            "action": []
+        }      
+    ]
+}

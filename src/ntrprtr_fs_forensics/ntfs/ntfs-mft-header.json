@@ -1,0 +1,280 @@
+{
+    "name": "NTFS MFT Entry Header Examiner",
+    "description": "Examines NTFS MFT Entry Headers",
+    "ntrprtr": [
+        {
+            "name": "signature",
+            "description": "Signature",
+            "start": 0,
+            "end": 3,
+            "action": [
+                {
+                    "type": "ascii",
+                    "nonAsciiPlaceholder": "."
+                },
+                {
+                    "type": "equals",
+                    "endianess": "big",
+                    "cmp": [
+                        {
+                            "value": "46494c45",
+                            "description": "FILE - Signature is valid!"
+                        },
+                        {
+                            "value": "42414144",
+                            "description": "BAAD - Signature is valid!"
+                        }
+                    ],
+                    "noMatch": "Signature invalid!"
+                }
+            ]
+        },
+        {
+            "name": "offsetToUpdateSeqArray",
+            "description": "Offset to Update Sequence Array",
+            "start": 4,
+            "end": 5,
+            "action": [
+                {
+                    "type": "endianess",
+                    "endianess": "little"
+                },
+                {
+                    "type": "decimal",
+                    "endianess": "little"
+                }
+            ]
+        },
+        {
+            "name": "sizeUpdateSeqArray",
+            "description": "Size of Update Sequence Array",
+            "start": 6,
+            "end": 7,
+            "action": [
+                {
+                    "type": "endianess",
+                    "endianess": "little"
+                },
+                {
+                    "type": "decimal",
+                    "endianess": "little"
+                }
+            ]
+        },
+        {
+            "name": "logFileSeqNr",
+            "description": "$LogFile Sequence Number",
+            "start": 8,
+            "end": 15,
+            "action": [
+                {
+                    "type": "endianess",
+                    "endianess": "little"
+                },
+                {
+                    "type": "decimal",
+                    "endianess": "little"
+                }
+            ]
+        },
+        {
+            "name": "seqNr",
+            "description": "Sequence Number",
+            "start": 16,
+            "end": 17,
+            "action": [
+                {
+                    "type": "endianess",
+                    "endianess": "little"
+                },
+                {
+                    "type": "decimal",
+                    "endianess": "little"
+                }
+            ]
+        },
+        {
+            "name": "hardlinkCount",
+            "description": "Hardlink Count",
+            "start": 18,
+            "end": 19,
+            "action": [
+                {
+                    "type": "endianess",
+                    "endianess": "little"
+                },
+                {
+                    "type": "decimal",
+                    "endianess": "little"
+                }
+            ]
+        },
+        {
+            "name": "offsetToFirstAttribute",
+            "description": "Offset to first Attribute",
+            "start": 20,
+            "end": 21,
+            "action": [
+                {
+                    "type": "endianess",
+                    "endianess": "little"
+                },
+                {
+                    "type": "decimal",
+                    "endianess": "little"
+                }
+            ]
+        },
+        {
+            "name": "flags",
+            "description": "Flags",
+            "start": 22,
+            "end": 23,
+            "action": [
+                {
+                    "type": "equals",
+                    "endianess": "big",
+                    "cmp": [
+                        {
+                            "value": "0000",
+                            "description": "Not allocated!"
+                        },
+                        {
+                            "value": "0001",
+                            "description": "Allocated"
+                        },
+                        {
+                            "value": "0002",
+                            "description": "Directory"
+                        },
+                        {
+                            "value": "0003",
+                            "description": "Non empty directory"
+                        }
+                    ],
+                    "noMatch": "Invalid flag configuation!"
+                }
+            ]
+        },
+        {
+            "name": "sizeOfMftEntry",
+            "description": "Size of MFT Entry",
+            "start": 24,
+            "end": 27,
+            "action": [
+                {
+                    "type": "endianess",
+                    "endianess": "little"
+                },
+                {
+                    "type": "decimal",
+                    "endianess": "little"
+                }
+            ]
+        },
+        {
+            "name": "allocatedSizeOfMftEntry",
+            "description": "Allocated Size of MFT Entry",
+            "start": 28,
+            "end": 31,
+            "action": [
+                {
+                    "type": "endianess",
+                    "endianess": "little"
+                },
+                {
+                    "type": "decimal",
+                    "endianess": "little"
+                }
+            ]
+        },
+        {
+            "name": "refToBaseEntry",
+            "description": "Reference to Base Entry",
+            "start": 32,
+            "end": 39
+        },
+        {
+            "name": "nextAttributeIdentifier",
+            "description": "Identificator of next Attribute",
+            "start": 40,
+            "end": 41,
+            "action": [
+                {
+                    "type": "endianess",
+                    "endianess": "little"
+                },
+                {
+                    "type": "decimal",
+                    "endianess": "little"
+                }
+            ]
+        },
+        {
+            "name": "notUsed1",
+            "description": "Not used",
+            "start": 42,
+            "end": 43
+        },
+        {
+            "name": "nrInMftEntry",
+            "description": "Number in MFT Entry",
+            "start": 44,
+            "end": 47,
+            "action": [
+                {
+                    "type": "endianess",
+                    "endianess": "little"
+                },
+                {
+                    "type": "decimal",
+                    "endianess": "little"
+                }
+            ]
+        },
+        {
+            "name": "stdPosUpdateSeqArr",
+            "description": "Standard Position of Update Sequence Array",
+            "start": 48,
+            "end": 52,
+            "action": [
+                {
+                    "type": "endianess",
+                    "endianess": "little"
+                },
+                {
+                    "type": "decimal",
+                    "endianess": "little"
+                }
+            ]
+        },
+        {
+            "name": "notUsed2",
+            "description": "Not used",
+            "start": 53,
+            "end": 71,
+            "action": [
+                {
+                    "type": "hexdump",
+                    "nonAsciiPlaceholder": "."
+                }
+            ]
+        },
+        {
+            "name": "posFirstAttr",
+            "description": "Position of first Attribute",
+            "start": 72,
+            "end": 73,
+            "action": [
+                {
+                    "type": "endianess",
+                    "endianess": "little"
+                },
+                {
+                    "type": "decimal",
+                    "endianess": "little"
+                }
+            ]
+        }        
+    ]
+}
