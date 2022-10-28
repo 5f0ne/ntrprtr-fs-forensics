@@ -127,6 +127,10 @@
             "end": 27,
             "action": [
                 {
+                    "type": "endianess",
+                    "endianess": "little"
+                },
+                {
                     "type": "decimal",
                     "endianess": "little"
                 }
@@ -138,6 +142,10 @@
             "start": 28,
             "end": 31,
             "action": [
+                {
+                    "type": "endianess",
+                    "endianess": "little"
+                },
                 {
                     "type": "decimal",
                     "endianess": "little"
@@ -160,7 +168,7 @@
         },
         {
             "name": "dataBlockPointer12",
-            "description": "12 direct Data Block Pointer",
+            "description": "Twelve direct Data Block Pointer",
             "start": 40,
             "end": 87,
             "action": [
@@ -172,21 +180,21 @@
         },
         {
             "name": "simpleIndirectDataBlockPointer",
-            "description": "1 simple indirect Data Block Pointer",
+            "description": "One simple indirect Data Block Pointer",
             "start": 88,
             "end": 91,
             "action": []
         },
         {
             "name": "doubleIndirectDataBlockPointer",
-            "description": "1 double indirect Data Block Pointer",
+            "description": "One double indirect Data Block Pointer",
             "start": 92,
             "end": 95,
             "action": []
         },
         {
             "name": "tripleIndirectDataBlockPointer",
-            "description": "1 triple indirect Data Block Pointer",
+            "description": "One triple indirect Data Block Pointer",
             "start": 96,
             "end": 99,
             "action": []
@@ -232,6 +240,10 @@
             "start": 117,
             "end": 117,
             "action": [
+                {
+                    "type": "endianess",
+                    "endianess": "little"
+                },
                 {
                     "type": "decimal",
                     "endianess": "little"
