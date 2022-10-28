@@ -65,7 +65,6 @@ It creates the following structure:
         ntfs-attribute-header-general.json
         ntfs-attribute-header-non-resident.json
         ntfs-attribute-header-resident.json
-        ntfs-attribute-standard-information.json
         ntfs-mft-header.json
         ntfs-vbr.json
 ```

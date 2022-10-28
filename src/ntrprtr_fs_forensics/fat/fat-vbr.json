@@ -27,6 +27,10 @@
             "end": 12,
             "action": [
                 {
+                    "type": "endianess",
+                    "endianess": "little"
+                },
+                {
                     "type": "decimal",
                     "endianess": "little"
                 }
@@ -38,6 +42,10 @@
             "start": 13,
             "end": 13,
             "action": [
+                {
+                    "type": "endianess",
+                    "endianess": "little"
+                },
                 {
                     "type": "decimal",
                     "endianess": "little"
@@ -51,6 +59,10 @@
             "end": 15,
             "action": [
                 {
+                    "type": "endianess",
+                    "endianess": "little"
+                },
+                {
                     "type": "decimal",
                     "endianess": "little"
                 }
@@ -62,6 +74,10 @@
             "start": 16,
             "end": 16,
             "action": [
+                {
+                    "type": "endianess",
+                    "endianess": "little"
+                },
                 {
                     "type": "decimal",
                     "endianess": "little"
@@ -75,6 +91,10 @@
             "end": 18,
             "action": [
                 {
+                    "type": "endianess",
+                    "endianess": "little"
+                },
+                {
                     "type": "decimal",
                     "endianess": "little"
                 }
@@ -86,6 +106,10 @@
             "start": 19,
             "end": 20,
             "action": [
+                {
+                    "type": "endianess",
+                    "endianess": "little"
+                },
                 {
                     "type": "decimal",
                     "endianess": "little"
@@ -122,6 +146,10 @@
             "end": 23,
             "action": [
                 {
+                    "type": "endianess",
+                    "endianess": "little"
+                },
+                {
                     "type": "decimal",
                     "endianess": "little"
                 }
@@ -133,6 +161,10 @@
             "start": 24,
             "end": 25,
             "action": [
+                {
+                    "type": "endianess",
+                    "endianess": "little"
+                },
                 {
                     "type": "decimal",
                     "endianess": "little"
@@ -146,6 +178,10 @@
             "end": 27,
             "action": [
                 {
+                    "type": "endianess",
+                    "endianess": "little"
+                },
+                {
                     "type": "decimal",
                     "endianess": "little"
                 }
@@ -158,6 +194,10 @@
             "end": 31,
             "action": [
                 {
+                    "type": "endianess",
+                    "endianess": "little"
+                },
+                {
                     "type": "decimal",
                     "endianess": "little"
                 }
@@ -169,6 +209,10 @@
             "start": 32,
             "end": 35,
             "action": [
+                {
+                    "type": "endianess",
+                    "endianess": "little"
+                },
                 {
                     "type": "decimal",
                     "endianess": "little"

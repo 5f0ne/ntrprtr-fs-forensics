@@ -67,6 +67,10 @@
             "end": 491,
             "action": [
                 {
+                    "type": "endianess",
+                    "endianess": "little"
+                },
+                {
                     "type": "decimal",
                     "endianess": "little"
                 }
@@ -78,6 +82,10 @@
             "start": 492,
             "end": 495,
             "action": [
+                {
+                    "type": "endianess",
+                    "endianess": "little"
+                },
                 {
                     "type": "decimal",
                     "endianess": "little"

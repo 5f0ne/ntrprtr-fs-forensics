@@ -9,6 +9,10 @@
             "end": 39,
             "action": [
                 {
+                    "type": "endianess",
+                    "endianess": "little"
+                },
+                {
                     "type": "decimal",
                     "endianess": "little"
                 }
@@ -33,6 +37,10 @@
             "end": 47,
             "action": [
                 {
+                    "type": "endianess",
+                    "endianess": "little"
+                },
+                {
                     "type": "decimal",
                     "endianess": "little"
                 }
@@ -45,6 +53,10 @@
             "end": 49,
             "action": [
                 {
+                    "type": "endianess",
+                    "endianess": "little"
+                },
+                {
                     "type": "decimal",
                     "endianess": "little"
                 }
@@ -56,6 +68,10 @@
             "start": 50,
             "end": 51,
             "action": [
+                {
+                    "type": "endianess",
+                    "endianess": "little"
+                },
                 {
                     "type": "decimal",
                     "endianess": "little"

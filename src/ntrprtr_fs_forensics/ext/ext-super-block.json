@@ -9,6 +9,10 @@
             "end": 3,
             "action": [
                 {
+                    "type": "endianess",
+                    "endianess": "little"
+                },
+                {
                     "type": "decimal",
                     "endianess": "little"
                 }
@@ -20,6 +24,10 @@
             "start": 4,
             "end": 7,
             "action": [
+                {
+                    "type": "endianess",
+                    "endianess": "little"
+                },
                 {
                     "type": "decimal",
                     "endianess": "little"
@@ -33,6 +41,10 @@
             "end": 11,
             "action": [
                 {
+                    "type": "endianess",
+                    "endianess": "little"
+                },
+                {
                     "type": "decimal",
                     "endianess": "little"
                 }
@@ -44,6 +56,10 @@
             "start": 12,
             "end": 15,
             "action": [
+                {
+                    "type": "endianess",
+                    "endianess": "little"
+                },
                 {
                     "type": "decimal",
                     "endianess": "little"
@@ -57,6 +73,10 @@
             "end": 19,
             "action": [
                 {
+                    "type": "endianess",
+                    "endianess": "little"
+                },
+                {
                     "type": "decimal",
                     "endianess": "little"
                 }
@@ -68,6 +88,10 @@
             "start": 20,
             "end": 23,
             "action": [
+                {
+                    "type": "endianess",
+                    "endianess": "little"
+                },
                 {
                     "type": "decimal",
                     "endianess": "little"
@@ -81,6 +105,10 @@
             "end": 27,
             "action": [
                 {
+                    "type": "endianess",
+                    "endianess": "little"
+                },
+                {
                     "type": "decimal",
                     "endianess": "little"
                 }
@@ -92,6 +120,10 @@
             "start": 28,
             "end": 31,
             "action": [
+                {
+                    "type": "endianess",
+                    "endianess": "little"
+                },
                 {
                     "type": "decimal",
                     "endianess": "little"
@@ -105,6 +137,10 @@
             "end": 35,
             "action": [
                 {
+                    "type": "endianess",
+                    "endianess": "little"
+                },
+                {
                     "type": "decimal",
                     "endianess": "little"
                 }
@@ -116,6 +152,10 @@
             "start": 36,
             "end": 39,
             "action": [
+                {
+                    "type": "endianess",
+                    "endianess": "little"
+                },
                 {
                     "type": "decimal",
                     "endianess": "little"
@@ -129,6 +169,10 @@
             "end": 43,
             "action": [
                 {
+                    "type": "endianess",
+                    "endianess": "little"
+                },
+                {
                     "type": "decimal",
                     "endianess": "little"
                 }
@@ -138,13 +182,41 @@
             "name": "dateLastMounting",
             "description": "Date of Last Mounting",
             "start": 44,
-            "end": 47
+            "end": 47,
+            "action": [
+                {
+                    "type": "endianess",
+                    "endianess": "little"
+                },
+                {
+                    "type": "decimal",
+                    "endianess": "little"
+                },
+                {
+                    "type": "unixtime",
+                    "endianess": "little"
+                }
+            ]
         },
         {
             "name": "dateLastWrite",
             "description": "Date of Last Write Access",
             "start": 48,
-            "end": 51
+            "end": 51,
+            "action": [
+                {
+                    "type": "endianess",
+                    "endianess": "little"
+                },
+                {
+                    "type": "decimal",
+                    "endianess": "little"
+                },
+                {
+                    "type": "unixtime",
+                    "endianess": "little"
+                }
+            ]
         },
         {
             "name": "mountCounter",
@@ -152,6 +224,10 @@
             "start": 52,
             "end": 53,
             "action": [
+                {
+                    "type": "endianess",
+                    "endianess": "little"
+                },
                 {
                     "type": "decimal",
                     "endianess": "little"
@@ -164,6 +240,10 @@
             "start": 54,
             "end": 55,
             "action": [
+                {
+                    "type": "endianess",
+                    "endianess": "little"
+                },
                 {
                     "type": "decimal",
                     "endianess": "little"
@@ -184,7 +264,7 @@
             "action": [
                 {
                     "type": "equals",
-                    "endianess": "big",
+                    "endianess": "little",
                     "cmp": [
                         {
                             "value": "0001",
@@ -211,7 +291,7 @@
             "action": [
                 {
                     "type": "equals",
-                    "endianess": "big",
+                    "endianess": "little",
                     "cmp": [
                         {
                             "value": "0001",
@@ -240,7 +320,21 @@
             "name": "dateLastConsistencyCheck",
             "description": "Date of Last Consistency Check",
             "start": 64,
-            "end": 67
+            "end": 67,
+            "action": [
+                {
+                    "type": "endianess",
+                    "endianess": "little"
+                },
+                {
+                    "type": "decimal",
+                    "endianess": "little"
+                },
+                {
+                    "type": "unixtime",
+                    "endianess": "little"
+                }
+            ]
         },
         {
             "name": "intervalBetweenForcedConsistencyChecks",
@@ -256,7 +350,7 @@
             "action": [
                 {
                     "type": "equals",
-                    "endianess": "big",
+                    "endianess": "little",
                     "cmp": [
                         {
                             "value": "00000000",
@@ -285,13 +379,13 @@
         },
         {
             "name": "majorVersion",
-            "description": "Major Verision",
+            "description": "Major Version",
             "start": 76,
             "end": 79,
             "action": [
                 {
                     "type": "equals",
-                    "endianess": "big",
+                    "endianess": "little",
                     "cmp": [
                         {
                             "value": "00000000",
@@ -325,6 +419,10 @@
             "end": 87,
             "action": [
                 {
+                    "type": "endianess",
+                    "endianess": "little"
+                },
+                {
                     "type": "decimal",
                     "endianess": "little"
                 }
@@ -337,6 +435,10 @@
             "end": 89,
             "action": [
                 {
+                    "type": "endianess",
+                    "endianess": "little"
+                },
+                {
                     "type": "decimal",
                     "endianess": "little"
                 }
@@ -348,6 +450,10 @@
             "start": 90,
             "end": 91,
             "action": [
+                {
+                    "type": "endianess",
+                    "endianess": "little"
+                },
                 {
                     "type": "decimal",
                     "endianess": "little"
@@ -397,7 +503,7 @@
             "end": 199,
             "action": [
                 {
-                    "type": "ascii",
+                    "type": "hexdump",
                     "nonAsciiPlaceholder": "."
                 }
             ]
@@ -415,6 +521,10 @@
             "end": 204,
             "action": [
                 {
+                    "type": "endianess",
+                    "endianess": "little"
+                },
+                {
                     "type": "decimal",
                     "endianess": "little"
                 }
@@ -426,6 +536,10 @@
             "start": 205,
             "end": 205,
             "action": [
+                {
+                    "type": "endianess",
+                    "endianess": "little"
+                },
                 {
                     "type": "decimal",
                     "endianess": "little"
@@ -451,6 +565,10 @@
             "end": 227,
             "action": [
                 {
+                    "type": "endianess",
+                    "endianess": "little"
+                },
+                {
                     "type": "decimal",
                     "endianess": "little"
                 }
@@ -469,6 +587,10 @@
             "end": 235,
             "action": [
                 {
+                    "type": "endianess",
+                    "endianess": "little"
+                },
+                {
                     "type": "decimal",
                     "endianess": "little"
                 }
@@ -478,7 +600,13 @@
             "name": "notUsed2",
             "description": "Not Used",
             "start": 236,
-            "end": 1023
+            "end": 1023,
+            "action": [
+                {
+                    "type": "hexdump",
+                    "nonAsciiPlaceholder": "."
+                }
+            ]
         }
     ]
 }
