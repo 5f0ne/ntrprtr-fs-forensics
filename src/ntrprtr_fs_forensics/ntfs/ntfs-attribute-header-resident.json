@@ -35,11 +35,10 @@
             ]
         },
         {
-            "name": "notUsed1",
-            "description": "Not used",
+            "name": "notUsed",
+            "description": "Not Used",
             "start": 22,
-            "end": 23,
-            "action": []
+            "end": 23
         }
     ]
 }

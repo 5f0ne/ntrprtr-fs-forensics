@@ -157,7 +157,31 @@
             "description": "Flags",
             "start": 12,
             "end": 13,
-            "action": []
+            "action": [
+                {
+                    "type": "endianess",
+                    "endianess": "little"
+                },
+                {
+                    "type": "equals",
+                    "endianess": "little",
+                    "noMatch": "Flag configuration unknown!",
+                    "cmp": [
+                        {
+                            "value": "0001",
+                            "description": "Compressed"
+                        },
+                        {
+                            "value": "4000",
+                            "description": "Encrypted"
+                        },
+                        {
+                            "value": "8000",
+                            "description": "Sparse"
+                        }
+                    ]
+                }
+            ]
         },
         {
             "name": "attrId",

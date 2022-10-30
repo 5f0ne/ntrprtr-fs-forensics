@@ -19,7 +19,7 @@
                     "cmp": [
                         {
                             "value": "E5",
-                            "description": "Not allocated!"
+                            "description": "Deleted!"
                         },
                         {
                             "value": "00",
@@ -61,7 +61,7 @@
                         },
                         {
                             "value": "00000010",
-                            "description": "Hidden"
+                            "description": "Hidden File"
                         },
                         {
                             "value": "00000100",
@@ -81,7 +81,7 @@
                         },
                         {
                             "value": "00100000",
-                            "description": "Object is Part of Archive"
+                            "description": "Archive"
                         }
                     ],
                     "noMatch": "No attributes found!"

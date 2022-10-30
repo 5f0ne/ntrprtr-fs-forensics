@@ -22,7 +22,7 @@
         },
         {
             "name": "sectorSize",
-            "description": "Logical Sector Size",
+            "description": "Logical Sector Size in Byte",
             "start": 11,
             "end": 12,
             "action": [
@@ -128,8 +128,8 @@
             "end": 39
         },
         {
-            "name": "totalNumberOfSectors",
-            "description": "Total Number of Sectors per Volume",
+            "name": "totalNumberOfSectorsVolume",
+            "description": "Total Number of Sectors in Volume",
             "start": 40,
             "end": 47,
             "action": [
@@ -177,7 +177,7 @@
         },
         {
             "name": "clusterPerMftEntry",
-            "description": "Cluster (or Byte) per MFT-Entry",
+            "description": "Number of Clusters per MFT entry",
             "start": 64,
               "end": 64,
             "action": [
@@ -195,7 +195,7 @@
         },
         {
             "name": "clusterPerIndexBuffer",
-            "description": "Cluster (or Byte) per Index Buffer",
+            "description": "Number of Clusters per Index Buffer",
             "start": 68,
               "end": 68,
             "action": [

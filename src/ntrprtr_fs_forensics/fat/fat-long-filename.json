@@ -44,8 +44,35 @@
             "end": 11,
             "action": [
                 {
-                    "type": "binary",
-                    "endianess": "big"
+                    "type": "bitequals",
+                    "endianess": "big",
+                    "noMatch": "No attributes found!",
+                    "cmp": [
+                        {
+                            "value": "00000001",
+                            "description": "Read Only"
+                        },
+                        {
+                            "value": "00000010",
+                            "description": "Hidden File"
+                        },
+                        {
+                            "value": "00000100",
+                            "description": "Windows System File"
+                        },
+                        {
+                            "value": "00001000",
+                            "description": "FAT Volume Label"
+                        },
+                        {
+                            "value": "00010000",
+                            "description": "Directory"
+                        },
+                        {
+                            "value": "00100000",
+                            "description": "Archive"
+                        }
+                    ]
                 }
             ]
         },

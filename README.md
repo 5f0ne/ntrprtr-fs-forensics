@@ -47,7 +47,6 @@ It creates the following structure:
 ```
 ./ntrprtr-fsf-config
 ├───ext
-│       ext-file-descriptor-table.json
 │       ext-group-descriptor-table.json
 │       ext-inode.json
 │       ext-super-block.json
@@ -62,10 +61,12 @@ It creates the following structure:
 │       fat-vbr.json
 │
 └───ntfs
+        ntfs-attribute-file-name.json
         ntfs-attribute-header-general.json
         ntfs-attribute-header-non-resident.json
         ntfs-attribute-header-resident.json
-        ntfs-mft-header.json
+        ntfs-attribute-standard-information.json
+        ntfs-mft-entry-header.json
         ntfs-vbr.json
 ```
 

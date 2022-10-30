@@ -22,7 +22,17 @@
             "name": "activeFatIndicator",
             "description": "Indicates which FAT structure is active",
             "start": 40,
-            "end": 41
+            "end": 41,
+            "action": [
+                {
+                    "type": "endianess",
+                    "endianess": "little"
+                },
+                {
+                    "type": "binary",
+                    "endianess": "little"
+                }
+            ]
         },
         {
             "name": "fsVersionNumber",

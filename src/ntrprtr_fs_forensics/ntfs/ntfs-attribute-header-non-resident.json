@@ -4,7 +4,7 @@
     "ntrprtr": [
         {
             "name": "startVirtClusterNr",
-            "description": "Start of Virtual Cluster Number",
+            "description": "Start of Virtual Cluster Number of Runlist",
             "start": 16,
             "end": 23,
             "action": [
@@ -20,7 +20,7 @@
         },
         {
             "name": "endVirtClusterNr",
-            "description": "End of Virtual Cluster Number",
+            "description": "End of Virtual Cluster Number of Runlist",
             "start": 24,
             "end": 31,
             "action": [
@@ -36,7 +36,7 @@
         },
         {
             "name": "runlistOffset",
-            "description": "Runlist Offset",
+            "description": "Runlist Offset in Bytes",
             "start": 32,
             "end": 33,
             "action": [

@@ -61,8 +61,8 @@
             ]
         },
         {
-            "name": "freeDataBlocks",
-            "description": "No. of Free Data Blocks",
+            "name": "freeDataUnit",
+            "description": "Number of Free Data Units",
             "start": 488,
             "end": 491,
             "action": [
@@ -77,8 +77,8 @@
             ]
         },
         {
-            "name": "positionNextFreeDataBlock",
-            "description": "Position of Next Free Data Block",
+            "name": "positionNextFreeDataUnit",
+            "description": "Position of next free Data Unit",
             "start": 492,
             "end": 495,
             "action": [

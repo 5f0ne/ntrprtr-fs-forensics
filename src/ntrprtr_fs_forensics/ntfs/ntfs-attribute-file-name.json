@@ -1,0 +1,269 @@
+{
+    "name": "NTFS MFT $FILE_NAME Attribute Examiner",
+    "description": "Examines NTFS MFT $FILE_NAME Attributes",
+    "ntrprtr": [
+        {
+            "name": " fileReferenceParentDir",
+            "description": "File Reference of Parent Directory",
+            "start": 24,
+            "end": 31,
+            "action": [
+                {
+                    "type": "endianess",
+                    "endianess": "little"
+                },
+                {
+                    "type": "decimal",
+                    "endianess": "little"
+                }
+            ]
+        },
+        {
+            "name": " fileCreationTime",
+            "description": "File Creation Time",
+            "start": 32,
+            "end": 39,
+            "action": [
+                {
+                    "type": "endianess",
+                    "endianess": "little"
+                },
+                {
+                    "type": "decimal",
+                    "endianess": "little"
+                }
+            ]
+        },
+        {
+            "name": " fileModificationTime",
+            "description": "File Modification Time",
+            "start": 40,
+            "end": 47,
+            "action": [
+                {
+                    "type": "endianess",
+                    "endianess": "little"
+                },
+                {
+                    "type": "decimal",
+                    "endianess": "little"
+                }
+            ]
+        },
+        {
+            "name": " mftEntryChangeTime",
+            "description": "MFT Entry Modification Time",
+            "start": 48,
+            "end": 55,
+            "action": [
+                {
+                    "type": "endianess",
+                    "endianess": "little"
+                },
+                {
+                    "type": "decimal",
+                    "endianess": "little"
+                }
+            ]
+        },
+        {
+            "name": "fileAccessTime",
+            "description": "File Access Time",
+            "start": 56,
+            "end": 59,
+            "action": [
+                {
+                    "type": "endianess",
+                    "endianess": "little"
+                },
+                {
+                    "type": "decimal",
+                    "endianess": "little"
+                }
+            ]
+        },
+        {
+            "name": "allocatedSizeOfFile",
+            "description": "Allocated Size of File",
+            "start": 60,
+            "end": 67,
+            "action": [
+                {
+                    "type": "endianess",
+                    "endianess": "little"
+                },
+                {
+                    "type": "decimal",
+                    "endianess": "little"
+                }
+            ]
+        },
+        {
+            "name": "realSizeOfFile",
+            "description": "Allocated Size of File",
+            "start": 68,
+            "end": 75,
+            "action": [
+                {
+                    "type": "endianess",
+                    "endianess": "little"
+                },
+                {
+                    "type": "decimal",
+                    "endianess": "little"
+                }
+            ]
+        },
+        {
+            "name": "realSizeOfFile",
+            "description": "Real Size of File",
+            "start": 76,
+            "end": 83,
+            "action": [
+                {
+                    "type": "endianess",
+                    "endianess": "little"
+                },
+                {
+                    "type": "decimal",
+                    "endianess": "little"
+                }
+            ]
+        },
+        {
+            "name": "flags",
+            "description": "Flags",
+            "start": 84,
+            "end": 87,
+            "action": [
+                {
+                    "type": "endianess",
+                    "endianess": "little"
+                },
+                {
+                    "type": "decimal",
+                    "endianess": "little"
+                },
+                {
+                    "type": "equals",
+                    "endianess": "little",
+                    "noMatch": "Flag Configuration unknown!",
+                    "cmp": [
+                        {
+                            "value": "00000001",
+                            "description": "Read Only"
+                        },
+                        {
+                            "value": "00000002",
+                            "description": "Hidden"
+                        },
+                        {
+                            "value": "00000004",
+                            "description": "System"
+                        },
+                        {
+                            "value": "00000020",
+                            "description": "Archive"
+                        },
+                        {
+                            "value": "00000040",
+                            "description": "Device"
+                        },
+                        {
+                            "value": "00000080",
+                            "description": "Normal"
+                        },
+                        {
+                            "value": "00000100",
+                            "description": "Temporary"
+                        },
+                        {
+                            "value": "00000200",
+                            "description": "Sparse File"
+                        },
+                        {
+                            "value": "00000400",
+                            "description": "Reparse Point"
+                        },
+                        {
+                            "value": "00000800",
+                            "description": "Compressed"
+                        },
+                        {
+                            "value": "00001000",
+                            "description": "Offline"
+                        },
+                        {
+                            "value": "00002000",
+                            "description": "Not Content Indexed"
+                        },
+                        {
+                            "value": "00004000",
+                            "description": "Encrypted"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "reparseValue",
+            "description": "Reparse Value",
+            "start": 88,
+            "end": 91,
+            "action": [
+                {
+                    "type": "endianess",
+                    "endianess": "little"
+                },
+                {
+                    "type": "decimal",
+                    "endianess": "little"
+                }
+            ]
+        },
+        {
+            "name": "lengthName",
+            "description": "Length of Name",
+            "start": 92,
+            "end": 92,
+            "action": [
+                {
+                    "type": "endianess",
+                    "endianess": "little"
+                },
+                {
+                    "type": "decimal",
+                    "endianess": "little"
+                }
+            ]
+        },
+        {
+            "name": "namespaceUsed",
+            "description": "Used Namespace",
+            "start": 93,
+            "end": 93,
+            "action": [
+                {
+                    "type": "endianess",
+                    "endianess": "little"
+                },
+                {
+                    "type": "decimal",
+                    "endianess": "little"
+                }
+            ]
+        },
+        {
+            "name": "name",
+            "description": "Name",
+            "start": 94,
+            "end": 349,
+            "action": [
+                {
+                    "type": "ascii",
+                    "nonAsciiPlaceholder": "."
+                }
+            ]
+        }
+    ]
+}

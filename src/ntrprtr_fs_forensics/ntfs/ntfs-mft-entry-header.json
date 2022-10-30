@@ -158,7 +158,7 @@
         },
         {
             "name": "sizeOfMftEntry",
-            "description": "Size of MFT Entry",
+            "description": "Size of MFT Entry in Bytes",
             "start": 24,
             "end": 27,
             "action": [
@@ -174,7 +174,7 @@
         },
         {
             "name": "allocatedSizeOfMftEntry",
-            "description": "Allocated Size of MFT Entry",
+            "description": "Allocated Size of MFT Entry in Bytes",
             "start": 28,
             "end": 31,
             "action": [
@@ -192,7 +192,24 @@
             "name": "refToBaseEntry",
             "description": "Reference to Base Entry",
             "start": 32,
-            "end": 39
+            "end": 39,
+             "action": [
+                {
+                    "type": "endianess",
+                    "endianess": "little"
+                },
+                {
+                    "type": "equals",
+                    "endianess": "little",
+                    "cmp": [
+                        {
+                            "value": "0000000000000000",
+                            "description": "Base Entry"
+                        }
+                    ],
+                    "noMatch": "Reference to Base Entry"
+                }
+            ]
         },
         {
             "name": "nextAttributeIdentifier",

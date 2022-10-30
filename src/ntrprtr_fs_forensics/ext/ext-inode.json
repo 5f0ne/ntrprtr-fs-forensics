@@ -9,8 +9,12 @@
             "end": 1,
             "action": [
                 {
+                    "type": "endianess",
+                    "endianess": "little"
+                },
+                {
                     "type": "binary",
-                    "endianess": "big"
+                    "endianess": "little"
                 }
             ]
         },
@@ -157,7 +161,16 @@
             "description": "Flags",
             "start": 32,
             "end": 35,
-            "action": []
+            "action": [
+                {
+                    "type": "endianess",
+                    "endianess": "little"
+                },
+                {
+                    "type": "binary",
+                    "endianess": "little"
+                }
+            ]
         },
         {
             "name": "notUsed1",
