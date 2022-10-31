@@ -5,7 +5,7 @@ with open("README.md", "r") as r:
 
 setup(
     name="ntrprtr_fs_forensics", 
-    version="0.5.0",
+    version="0.6.0",
     author="5f0",
     url="https://github.com/5f0ne/ntrprtr-fs-forensics",
     description="ntrprtr configurations for forensic analysis of file systems",

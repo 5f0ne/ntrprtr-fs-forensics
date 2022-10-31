@@ -71,6 +71,7 @@ It creates the following structure:
 ```
 
 Now just use the config as input for `ntrprtr`:
+
 ```bash
 python -m ntrprtr -m interpret -p dir-entry.bin -c ./ntrprtr-fsf-config/fat/fat-directory-entry.json -r result.txt
 ```

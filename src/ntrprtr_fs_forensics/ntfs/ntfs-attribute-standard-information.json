@@ -15,6 +15,10 @@
                 {
                     "type": "decimal",
                     "endianess": "little"
+                },
+                {
+                    "type": "win32time",
+                    "endianess": "little"
                 }
             ]
         },
@@ -30,6 +34,10 @@
                 },
                 {
                     "type": "decimal",
+                    "endianess": "little"
+                },
+                {
+                    "type": "win32time",
                     "endianess": "little"
                 }
             ]
@@ -47,6 +55,10 @@
                 {
                     "type": "decimal",
                     "endianess": "little"
+                },
+                {
+                    "type": "win32time",
+                    "endianess": "little"
                 }
             ]
         },
@@ -62,6 +74,10 @@
                 },
                 {
                     "type": "decimal",
+                    "endianess": "little"
+                },
+                {
+                    "type": "win32time",
                     "endianess": "little"
                 }
             ]
