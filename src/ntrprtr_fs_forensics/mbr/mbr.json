@@ -1,0 +1,325 @@
+{
+    "name": "Master Boot Record Examiner",
+    "description": "Examines Master Boot Records",
+    "ntrprtr": [
+        {
+            "name": "bootloader",
+            "description": "Bootloader",
+            "start": 0,
+            "end": 439,
+            "action": [
+                {
+                    "type": "hexdump",
+                    "nonAsciiPlaceholder": "."
+                }
+            ]
+        },
+        {
+            "name": "serialNr",
+            "description": "Serial Number",
+            "start": 440,
+            "end": 443
+        },
+        {
+            "name": "nullBytes",
+            "description": "Null Bytes",
+            "start": 444,
+            "end": 445
+        },
+        {
+            "name": "bootIndicator1",
+            "description": "First Partition Entry - Boot Indicator",
+            "start": 446,
+            "end": 446,
+            "action": [
+                {
+                    "type": "equals",
+                    "endianess": "little",
+                    "noMatch": "Not bootable!",
+                    "cmp": [
+                        {
+                            "value": "80",
+                            "description": "Bootable"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "firstChs1",
+            "description": "First Partition Entry - First Sector (CHS)",
+            "start": 447,
+            "end": 449
+        },
+        {
+            "name": "partType1",
+            "description": "First Partition Entry - Partition Type",
+            "start": 450,
+            "end": 450
+        },
+        {
+            "name": "lastChs1",
+            "description": "First Partition Entry - Last Sector (CHS)",
+            "start": 451,
+            "end": 453
+        },
+        {
+            "name": "offsetFirstSector1",
+            "description": "First Partition Entry - Offset to First Sector",
+            "start": 454,
+            "end": 457,
+            "action": [
+                {
+                    "type": "endianess",
+                    "endianess": "little"
+                },
+                {
+                    "type": "decimal",
+                    "endianess": "little"
+                }
+            ]
+        },
+        {
+            "name": "nrSectors1",
+            "description": "First Partition Entry - Number of Sectors in Partition",
+            "start": 458,
+            "end": 461,
+            "action": [
+                {
+                    "type": "endianess",
+                    "endianess": "little"
+                },
+                {
+                    "type": "decimal",
+                    "endianess": "little"
+                }
+            ]
+        },
+        {
+            "name": "bootIndicator2",
+            "description": "Second Partition Entry - Boot Indicator",
+            "start": 462,
+            "end": 462,
+            "action": [
+                {
+                    "type": "equals",
+                    "endianess": "little",
+                    "noMatch": "Not bootable!",
+                    "cmp": [
+                        {
+                            "value": "80",
+                            "description": "Bootable"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "firstChs2",
+            "description": "Second Partition Entry - First Sector (CHS)",
+            "start": 463,
+            "end": 465
+        },
+        {
+            "name": "partType2",
+            "description": "Second Partition Entry - Partition Type",
+            "start": 466,
+            "end": 466
+        },
+        {
+            "name": "lastChs2",
+            "description": "Second Partition Entry - Last Sector (CHS)",
+            "start": 467,
+            "end": 469
+        },
+        {
+            "name": "offsetFirstSector2",
+            "description": "Second Partition Entry - Offset to First Sector",
+            "start": 470,
+            "end": 473,
+            "action": [
+                {
+                    "type": "endianess",
+                    "endianess": "little"
+                },
+                {
+                    "type": "decimal",
+                    "endianess": "little"
+                }
+            ]
+        },
+        {
+            "name": "nrSectors2",
+            "description": "Second Partition Entry - Number of Sectors in Partition",
+            "start": 474,
+            "end": 477,
+            "action": [
+                {
+                    "type": "endianess",
+                    "endianess": "little"
+                },
+                {
+                    "type": "decimal",
+                    "endianess": "little"
+                }
+            ]
+        },
+        {
+            "name": "bootIndicator3",
+            "description": "Third Partition Entry - Boot Indicator",
+            "start": 478,
+            "end": 478,
+            "action": [
+                {
+                    "type": "equals",
+                    "endianess": "little",
+                    "noMatch": "Not bootable!",
+                    "cmp": [
+                        {
+                            "value": "80",
+                            "description": "Bootable"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "firstChs3",
+            "description": "Third Partition Entry - First Sector (CHS)",
+            "start": 479,
+            "end": 481
+        },
+        {
+            "name": "partType3",
+            "description": "Third Partition Entry - Partition Type",
+            "start": 482,
+            "end": 482
+        },
+        {
+            "name": "lastChs3",
+            "description": "Third Partition Entry - Last Sector (CHS)",
+            "start": 483,
+            "end": 485
+        },
+        {
+            "name": "offsetFirstSector3",
+            "description": "Third Partition Entry - Offset to First Sector",
+            "start": 486,
+            "end": 489,
+            "action": [
+                {
+                    "type": "endianess",
+                    "endianess": "little"
+                },
+                {
+                    "type": "decimal",
+                    "endianess": "little"
+                }
+            ]
+        },
+        {
+            "name": "nrSectors3",
+            "description": "Third Partition Entry - Number of Sectors in Partition",
+            "start": 490,
+            "end": 493,
+            "action": [
+                {
+                    "type": "endianess",
+                    "endianess": "little"
+                },
+                {
+                    "type": "decimal",
+                    "endianess": "little"
+                }
+            ]
+        },
+        {
+            "name": "bootIndicator4",
+            "description": "Fourth Partition Entry - Boot Indicator",
+            "start": 494,
+            "end": 494,
+            "action": [
+                {
+                    "type": "equals",
+                    "endianess": "little",
+                    "noMatch": "Not bootable!",
+                    "cmp": [
+                        {
+                            "value": "80",
+                            "description": "Bootable"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "firstChs4",
+            "description": "Fourth Partition Entry - First Sector (CHS)",
+            "start": 495,
+            "end": 497
+        },
+        {
+            "name": "partType4",
+            "description": "Fourth Partition Entry - Partition Type",
+            "start": 498,
+            "end": 498
+        },
+        {
+            "name": "lastChs4",
+            "description": "Fourth Partition Entry - Last Sector (CHS)",
+            "start": 499,
+            "end": 501
+        },
+        {
+            "name": "offsetFirstSector4",
+            "description": "Fourth Partition Entry - Offset to First Sector",
+            "start": 502,
+            "end": 505,
+            "action": [
+                {
+                    "type": "endianess",
+                    "endianess": "little"
+                },
+                {
+                    "type": "decimal",
+                    "endianess": "little"
+                }
+            ]
+        },
+        {
+            "name": "nrSectors4",
+            "description": "Fourth Partition Entry - Number of Sectors in Partition",
+            "start": 506,
+            "end": 509,
+            "action": [
+                {
+                    "type": "endianess",
+                    "endianess": "little"
+                },
+                {
+                    "type": "decimal",
+                    "endianess": "little"
+                }
+            ]
+        },
+        {
+            "name": "signature",
+            "description": "Signature",
+            "start": 510,
+            "end": 511,
+            "action": [
+                {
+                    "type": "equals",
+                    "endianess": "big",
+                    "noMatch": "Signature unknown!",
+                    "cmp": [
+                        {
+                            "value": "55AA",
+                            "description": "Valid Signature"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

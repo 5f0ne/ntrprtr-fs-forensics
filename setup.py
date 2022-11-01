@@ -5,7 +5,7 @@ with open("README.md", "r") as r:
 
 setup(
     name="ntrprtr_fs_forensics", 
-    version="0.6.0",
+    version="0.7.0",
     author="5f0",
     url="https://github.com/5f0ne/ntrprtr-fs-forensics",
     description="ntrprtr configurations for forensic analysis of file systems",
@@ -26,6 +26,8 @@ setup(
                                       "fat-directory-entry.json", "fat-long-filename.json"],
         "ntrprtr_fs_forensics.ext": ["ext-group-descriptor-table.json", "ext-inode.json",
                                      "ext-super-block.json"],
+        "ntrprtr_fs_forensics.mbr": ["mbr.json"],
+        "ntrprtr_fs_forensics.gpt": ["gpt-header.json", "gpt-entry.json"],
         "ntrprtr_fs_forensics.ntfs": ["ntfs-vbr.json", "ntfs-mft-entry-header.json", 
                                       "ntfs-attribute-header-general.json",
                                       "ntfs-attribute-header-non-resident.json",

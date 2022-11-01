@@ -46,6 +46,7 @@ It creates the following structure:
 
 ```
 ./ntrprtr-fsf-config
+|
 ├───ext
 │       ext-group-descriptor-table.json
 │       ext-inode.json
@@ -59,6 +60,13 @@ It creates the following structure:
 │       fat-vbr-fat32.json
 │       fat-vbr-type.json
 │       fat-vbr.json
+|
+├───gpt
+│       gpt-entry.json
+|       gpt-header.json
+|
+├───mbr
+│       mbr.json
 │
 └───ntfs
         ntfs-attribute-file-name.json

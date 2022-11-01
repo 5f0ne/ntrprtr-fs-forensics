@@ -29,6 +29,8 @@ def main(args_=None):
             copytree(os.path.join(sourceDir, "ext"), os.path.join(targetDir, "ext"), ignore=ignore_patterns('__pycache__', '*.py'))
             copytree(os.path.join(sourceDir, "fat"), os.path.join(targetDir, "fat"), ignore=ignore_patterns('__pycache__', '*.py'))
             copytree(os.path.join(sourceDir, "ntfs"), os.path.join(targetDir, "ntfs"), ignore=ignore_patterns('__pycache__', '*.py'))
+            copytree(os.path.join(sourceDir, "gpt"), os.path.join(targetDir, "gpt"), ignore=ignore_patterns('__pycache__', '*.py'))
+            copytree(os.path.join(sourceDir, "mbr"), os.path.join(targetDir, "mbr"), ignore=ignore_patterns('__pycache__', '*.py'))
             print("")
             print("ntrprtr file system forensics configurations copied successfully: " + targetDir)
             print("")

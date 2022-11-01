@@ -1,0 +1,200 @@
+{
+    "name": "Guid Partition Table Header Examiner",
+    "description": "Examines GPT Header",
+    "ntrprtr": [
+        {
+            "name": "gptSig",
+            "description": "GPT Signature",
+            "start": 0,
+            "end": 7,
+            "action": [
+                {
+                    "type": "endianess",
+                    "endianess": "little"
+                },
+                {
+                    "type": "ascii",
+                    "nonAsciiPlaceholder": "."
+                }
+            ]
+        },
+        {
+            "name": "revision",
+            "description": "Revision",
+            "start": 8,
+            "end": 11
+        },
+        {
+            "name": "headerSize",
+            "description": "Header Size",
+            "start": 12,
+            "end": 15,
+            "action": [
+                {
+                    "type": "endianess",
+                    "endianess": "little"
+                },
+                {
+                    "type": "decimal",
+                    "endianess": "little"
+                }
+            ]
+        },
+        {
+            "name": "checksum",
+            "description": "Header CRC32 Checksum",
+            "start": 16,
+            "end": 19,
+            "action": [
+                {
+                    "type": "endianess",
+                    "endianess": "little"
+                },
+                {
+                    "type": "decimal",
+                    "endianess": "little"
+                }
+            ]
+        },
+        {
+            "name": "reserved",
+            "description": "Reserved Area",
+            "start": 20,
+            "end": 23
+        },
+        {
+            "name": "posPrimGptHeader",
+            "description": "Position of Primary GPT Header",
+            "start": 24,
+            "end": 31,
+            "action": [
+                {
+                    "type": "endianess",
+                    "endianess": "little"
+                },
+                {
+                    "type": "decimal",
+                    "endianess": "little"
+                }
+            ]
+        },
+        {
+            "name": "posSecGptHeader",
+            "description": "Position of Secondary GPT Header",
+            "start": 32,
+            "end": 39,
+            "action": [
+                {
+                    "type": "endianess",
+                    "endianess": "little"
+                },
+                {
+                    "type": "decimal",
+                    "endianess": "little"
+                }
+            ]
+        },
+        {
+            "name": "firstLbaForPartEntry",
+            "description": "First LBA for Partition Entry",
+            "start": 40,
+            "end": 47,
+            "action": [
+                {
+                    "type": "endianess",
+                    "endianess": "little"
+                },
+                {
+                    "type": "decimal",
+                    "endianess": "little"
+                }
+            ]
+        },
+        {
+            "name": "lastLbaForPartEntry",
+            "description": "Last LBA for Partition Entry",
+            "start": 48,
+            "end": 55,
+            "action": [
+                {
+                    "type": "endianess",
+                    "endianess": "little"
+                },
+                {
+                    "type": "decimal",
+                    "endianess": "little"
+                }
+            ]
+        },
+        {
+            "name": "diskGuid",
+            "description": "Disk GUID",
+            "start": 56,
+            "end": 71
+        },
+        {
+            "name": "startLbaOfPartTable",
+            "description": "Start LBA of Partition Table",
+            "start": 72,
+            "end": 79,
+            "action": [
+                {
+                    "type": "endianess",
+                    "endianess": "little"
+                },
+                {
+                    "type": "decimal",
+                    "endianess": "little"
+                }
+            ]
+        },
+        {
+            "name": "maxNrOfPartEntries",
+            "description": "Position of Primary GPT Header",
+            "start": 80,
+            "end": 83,
+            "action": [
+                {
+                    "type": "endianess",
+                    "endianess": "little"
+                },
+                {
+                    "type": "decimal",
+                    "endianess": "little"
+                }
+            ]
+        },
+        {
+            "name": "sizeOfPartEntry",
+            "description": "Size of Partition Entry in Byte",
+            "start": 84,
+            "end": 87,
+            "action": [
+                {
+                    "type": "endianess",
+                    "endianess": "little"
+                },
+                {
+                    "type": "decimal",
+                    "endianess": "little"
+                }
+            ]
+        },
+        {
+            "name": "partTableChecksum",
+            "description": "Partition Table CRC32 Checksum",
+            "start": 88,
+            "end": 91,
+            "action": [
+                {
+                    "type": "endianess",
+                    "endianess": "little"
+                },
+                {
+                    "type": "decimal",
+                    "endianess": "little"
+                }
+            ]
+        }
+    ]
+}

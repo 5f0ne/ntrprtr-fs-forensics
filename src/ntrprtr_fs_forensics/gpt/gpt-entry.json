@@ -1,0 +1,85 @@
+{
+    "name": "Guid Partition Table Entry Examiner",
+    "description": "Examines GPT Entries",
+    "ntrprtr": [
+        {
+            "name": "partTypeGuid",
+            "description": "Partition Type GUID",
+            "start": 0,
+            "end": 15
+        },
+        {
+            "name": "partGuid",
+            "description": "Partition GUID",
+            "start": 16,
+            "end": 31
+        },
+        {
+            "name": "partStart",
+            "description": "Start of Partition - First LBA",
+            "start": 32,
+            "end": 39,
+            "action": [
+                {
+                    "type": "endianess",
+                    "endianess": "little"
+                },
+                {
+                    "type": "decimal",
+                    "endianess": "little"
+                }
+            ]
+        },
+        {
+            "name": "partEnd",
+            "description": "End of Partition - Last LBA",
+            "start": 40,
+            "end": 47,
+            "action": [
+                {
+                    "type": "endianess",
+                    "endianess": "little"
+                },
+                {
+                    "type": "decimal",
+                    "endianess": "little"
+                }
+            ]
+        },
+        {
+            "name": "attr",
+            "description": "Attributes",
+            "start": 48,
+            "end": 55,
+            "action": [
+                {
+                    "type": "endianess",
+                    "endianess": "little"
+                },
+                {
+                    "type": "equals",
+                    "endianess": "little",
+                    "noMatch": "Attribute Value unknown",
+                    "cmp": [
+                        {
+                            "value": "0000000000000000",
+                            "description": "System Partition"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "partName",
+            "description": "Partition Name",
+            "start": 56,
+            "end": 127,
+            "action": [
+                {
+                    "type": "hexdump",
+                    "nonAsciiPlaceholder": "."
+                }
+            ]
+        }
+    ]
+}
