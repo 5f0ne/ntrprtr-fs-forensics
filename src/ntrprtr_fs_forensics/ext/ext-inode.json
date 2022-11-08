@@ -15,6 +15,10 @@
                 {
                     "type": "binary",
                     "endianess": "little"
+                },
+                {
+                    "type": "extfilemode",
+                    "endianess": "little"
                 }
             ]
         },
@@ -35,7 +39,16 @@
             "description": "Lower 32 Bit of File Size",
             "start": 4,
             "end": 7,
-            "action": []
+            "action": [
+                {
+                    "type": "endianess",
+                    "endianess": "little"
+                },
+                {
+                    "type": "decimal",
+                    "endianess": "little"
+                }
+            ]
         },
         {
             "name": "accessTime",
@@ -167,8 +180,59 @@
                     "endianess": "little"
                 },
                 {
-                    "type": "binary",
-                    "endianess": "little"
+                    "type": "equals",
+                    "endianess": "little",
+                    "cmp": [
+                        {
+                            "value": "00000001",
+                            "description": "Secure Deletion"
+                        },
+                        {
+                            "value": "00000002",
+                            "description": "Keep a copy of data when deleted"
+                        },
+                        {
+                            "value": "00000004",
+                            "description": "File Compression"
+                        },
+                        {
+                            "value": "00000008",
+                            "description": "Synchronous Updates"
+                        },
+                        {
+                            "value": "00000010",
+                            "description": "Immutable File"
+                        },
+                        {
+                            "value": "00000020",
+                            "description": "Append Only"
+                        },
+                        {
+                            "value": "00000040",
+                            "description": "Dump utility does not dump this file"
+                        },
+                        {
+                            "value": "00000080",
+                            "description": "Do not update access time"
+                        },
+                        {
+                            "value": "00001000",
+                            "description": "Hash indexed directory"
+                        },
+                        {
+                            "value": "00002000",
+                            "description": "AFS magic directory"
+                        },
+                        {
+                            "value": "00040000",
+                            "description": "Huge File"
+                        },
+                        {
+                            "value": "00080000",
+                            "description": "Inode uses extents"
+                        }
+                    ],
+                    "noMatch": "No match found!"
                 }
             ]
         },
@@ -238,14 +302,32 @@
             "description": "Block Address of Fragment",
             "start": 112,
             "end": 115,
-            "action": []
+            "action": [
+                {
+                    "type": "endianess",
+                    "endianess": "little"
+                },
+                {
+                    "type": "decimal",
+                    "endianess": "little"
+                }
+            ]
         },
         {
             "name": "fragmentIndexInBlock",
             "description": "Fragment Index within Block",
             "start": 116,
             "end": 116,
-            "action": []
+            "action": [
+                {
+                    "type": "endianess",
+                    "endianess": "little"
+                },
+                {
+                    "type": "decimal",
+                    "endianess": "little"
+                }
+            ]
         },
         {
             "name": "fragmentSize",
