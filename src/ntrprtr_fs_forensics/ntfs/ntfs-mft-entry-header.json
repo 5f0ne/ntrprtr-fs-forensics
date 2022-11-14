@@ -18,11 +18,11 @@
                     "cmp": [
                         {
                             "value": "46494c45",
-                            "description": "FILE - Signature is valid!"
+                            "description": "FILE - File is valid!"
                         },
                         {
                             "value": "42414144",
-                            "description": "BAAD - Signature is valid!"
+                            "description": "BAAD - File Error!"
                         }
                     ],
                     "noMatch": "Signature invalid!"

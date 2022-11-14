@@ -36,7 +36,7 @@
         },
         {
             "name": "lower32BitFileSize",
-            "description": "Lower 32 Bit of File Size",
+            "description": "Lower 32 Bit of File Size in Byte",
             "start": 4,
             "end": 7,
             "action": [
@@ -155,7 +155,7 @@
         },
         {
             "name": "noOfSectors",
-            "description": "No. of Sectors",
+            "description": "No. of Logical Sectors allocated",
             "start": 28,
             "end": 31,
             "action": [
@@ -292,7 +292,7 @@
         },
         {
             "name": "upper32BitsFileSize",
-            "description": "Upper 32 Bits of File Size",
+            "description": "Upper 32 Bits of File Size in Byte",
             "start": 108,
             "end": 111,
             "action": []
